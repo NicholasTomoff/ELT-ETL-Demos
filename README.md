@@ -81,3 +81,38 @@ outside of traditional data warehouses.
 - Refactor transformation logic into Python modules
 - Add schema validation
 - Load transformed data into a warehouse target
+
+## Constraints & Design Decisions
+
+This project was intentionally designed to use only free or low-cost tools
+that are publicly accessible.
+
+### Intellectual Property Constraints
+Professional analytics and engineering work performed in enterprise
+environments cannot be shared due to intellectual property ownership and
+confidentiality agreements.
+
+As a result, this example was created to demonstrate equivalent concepts
+using publicly reproducible tooling rather than proprietary systems.
+
+### Infrastructure & Cost Considerations
+The source application is hosted on Fly.io using a free-tier PostgreSQL
+instance. This environment reflects common real-world constraints, including:
+- Limited compute resources
+- Network and IP-based access controls
+- Non-enterprise authentication patterns
+
+These constraints influenced architectural choices such as:
+- API-based data extraction instead of direct database access
+- Spreadsheet-based analysis instead of warehouse-based transformations
+
+### Tooling Tradeoffs
+Google Sheets was selected as the transformation layer to mirror workflows
+commonly used by analysts and business users, particularly in environments
+where:
+- Excel licenses are unavailable
+- Cloud-based collaboration is required
+- Low operational overhead is preferred
+
+This design emphasizes adaptability rather than optimization for scale.
+
